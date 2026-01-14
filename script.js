@@ -38,6 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   window.handleYesClick = function () {
-    window.location.href = "yes_page.html";
+    window.location.href = "yes-page.html";
   };
 });
