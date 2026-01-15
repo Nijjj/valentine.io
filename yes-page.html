@@ -8,19 +8,32 @@
     body {
       margin: 0;
       height: 100vh;
-      background: #f8cfd4;
+      background: linear-gradient(135deg, #ffd1dc, #f8cfd4);
       display: flex;
       justify-content: center;
       align-items: center;
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: system-ui, Arial, sans-serif;
     }
     h1 {
       color: #b3002d;
-      font-size: 48px;
+      font-size: 56px;
+      animation: pop 0.6s ease;
+    }
+    @keyframes pop {
+      from { transform: scale(0.6); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <h1>YAY!!! 💖🥰</h1>
+  <h1 id="msg">YAY!!! 💖🥰</h1>
+
+  <script>
+    const name = localStorage.getItem("valentineName");
+    if (name) {
+      document.getElementById("msg").textContent =
+        `YAY!!! 💖🥰 I love you, ${name}!`;
+    }
+  </script>
 </body>
 </html>
