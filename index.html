@@ -3,12 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Valentine?</title>
+  <title>Be My Valentine?</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>Will you be my Valentine?</h1>
+  <main class="container">
+    <h1 id="question">Will you be my Valentine? 💘</h1>
+
+    <input
+      id="nameInput"
+      type="text"
+      placeholder="Enter your name 💌"
+      maxlength="20"
+    />
 
     <div class="buttons">
       <button class="yes-button" onclick="handleYesClick()">Yes</button>
@@ -16,13 +23,17 @@
     </div>
 
     <div class="cat">
-      <img
-        src="https://tenor.com/view/cat-tongue-shake-cat-meme-white-cat-tongue-cat-gif-17638709254706960287"
-        alt="Cute cat"
-      />
-      <div class="heart">💗</div>
+      <img src="assets/cat.png" alt="Cute cat with glasses" />
+      <span class="heart">💗</span>
     </div>
-  </div>
+
+    <audio id="bgMusic" loop>
+      <source
+        src="https://cdn.pixabay.com/audio/2023/02/14/audio_1b8b9c1c9c.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+  </main>
 
   <script src="script.js"></script>
 </body>
